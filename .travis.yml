@@ -1,0 +1,8 @@
+sudo: required
+dist: focal
+
+services:
+- docker
+
+script:
+  - make VERSION=latest release
