@@ -13,7 +13,7 @@ build: install
 	  --build-arg BUILD_DATE="$(shell date -u --iso-8601)" \
 	  --build-arg VCS_REF="$(shell git rev-parse --short HEAD)" \
 	  --build-arg vERSION="$(VERSION)" \
-	  t $(IMAGE):$(VERSION) --push .
+	  -t $(IMAGE):$(VERSION) --push .
 
 push: build
 	docker push $(IMAGE):$(VERSION)
